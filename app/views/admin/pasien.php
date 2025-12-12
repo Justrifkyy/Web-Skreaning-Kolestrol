@@ -1,23 +1,25 @@
 <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 
-<div class="container-fluid px-3 px-md-4 py-4">
-    <div class="row mb-4">
-        <div class="col-12">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
-                <div>
-                    <h2 class="fw-bold text-dark mb-2">
-                        <i class="bi bi-people-fill text-primary me-2"></i>Data Pasien Skrining
-                    </h2>
-                    <p class="text-muted mb-0 small">Kelola hasil tes dan berikan feedback medis kepada pasien</p>
-                </div>
-                <div>
-                    <a href="<?= BASEURL; ?>/admin/export" target="_blank" class="btn btn-success btn-sm shadow-sm rounded-pill px-3">
-                        <i class="bi bi-file-earmark-excel-fill me-2"></i>
-                        <span class="d-none d-sm-inline">Export Excel</span>
-                    </a>
-                </div>
+<div class="container-fluid px-3 px-md-4 py-5">
+    <div class="row mb-5 justify-content-center">
+        <div class="col-12 col-md-8 text-center">
+
+            <h2 class="fw-bold text-dark mb-3">
+                <i class="bi bi-people-fill text-primary me-2"></i>Data Pasien Skrining
+            </h2>
+
+            <p class="text-muted mb-4 fs-5">
+                Kelola hasil tes dan berikan feedback medis kepada pasien
+            </p>
+
+            <div class="d-flex justify-content-center">
+                <a href="<?= BASEURL; ?>/admin/export" target="_blank" class="btn btn-excel-custom rounded-pill px-4 py-2 shadow-sm d-flex align-items-center gap-2">
+                    <i class="bi bi-file-earmark-excel-fill fs-5"></i>
+                    <span>Download Laporan Excel</span>
+                </a>
             </div>
+
         </div>
     </div>
 
@@ -197,38 +199,6 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $('#tabelPasien').DataTable({
-            "pageLength": 10, // INI YANG MEMBATASI 10 DATA
-            "lengthMenu": [
-                [10, 25, 50, -1],
-                [10, 25, 50, "Semua"]
-            ],
-            "language": {
-                "search": "Cari:",
-                "searchPlaceholder": "Nama, email...",
-                "lengthMenu": "Tampil _MENU_",
-                "info": "Hal _PAGE_ dari _PAGES_",
-                "paginate": {
-                    "next": "›",
-                    "previous": "‹"
-                },
-                "zeroRecords": "Tidak ditemukan data yang cocok",
-                "infoEmpty": "Data kosong",
-                "infoFiltered": "(total _MAX_ data)"
-            },
-            "order": [], // Urutan default ikut database (terbaru)
-            "responsive": true,
-            "dom": '<"row mb-3"<"col-md-6"l><"col-md-6"f>>rt<"row mt-3"<"col-md-6"i><"col-md-6"p>>'
-        });
-    });
-</script>
-
 <style>
     /* Styling Tambahan */
     body {
@@ -265,6 +235,7 @@
         background-color: #e7f1ff !important;
     }
 
+    /* Styling DataTables (Search & Pagination) sudah ditangani di Footer.php */
     .dataTables_wrapper .dataTables_filter input {
         border-radius: 20px;
         padding: 5px 15px;
@@ -301,5 +272,21 @@
 
     .pagination .page-link:hover {
         background-color: #e9ecef;
+    }
+
+    .btn-excel-custom {
+        background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+        /* Gradasi Hijau Segar */
+        color: white;
+        border: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-excel-custom:hover {
+        background: linear-gradient(135deg, #157347 0%, #198754 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3) !important;
+        color: white;
     }
 </style>

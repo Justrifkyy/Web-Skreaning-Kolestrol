@@ -1,17 +1,19 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
 
-<div class="container-fluid px-0 px-md-2">
+<div class="container-fluid px-0 px-md-2 py-5">
 
     <div class="row mb-4">
         <div class="col-12">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+            <div class="d-flex flex-column align-items-center text-center gap-3">
+
                 <div>
                     <h2 class="fw-bold text-dark mb-2">
                         <i class="bi bi-speedometer2 text-primary me-2"></i>Dashboard Overview
                     </h2>
                     <p class="text-muted mb-0">Ringkasan aktivitas skrining kesehatan pasien KoloCheck</p>
                 </div>
-                <div class="d-flex gap-2">
+
+                <div class="d-flex gap-2 justify-content-center">
                     <button class="btn btn-outline-primary btn-sm rounded-pill px-3" onclick="window.location.reload()">
                         <i class="bi bi-arrow-clockwise me-1"></i>Refresh
                     </button>
@@ -19,6 +21,7 @@
                         <i class="bi bi-people-fill me-1"></i>Lihat Semua Data
                     </a>
                 </div>
+
             </div>
         </div>
     </div>

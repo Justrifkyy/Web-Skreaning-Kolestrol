@@ -7,9 +7,6 @@
                     <i class="bi bi-arrow-left me-2"></i>Kembali ke Dashboard
                 </a>
 
-                <a href="<?= BASEURL; ?>/skrining/cetak/<?= $data['detail']['id']; ?>" target="_blank" class="btn btn-primary btn-lg rounded-pill px-4 shadow btn-print">
-                    <i class="bi bi-printer-fill me-2"></i>Cetak Laporan (PDF)
-                </a>
             </div>
         </div>
     </div>

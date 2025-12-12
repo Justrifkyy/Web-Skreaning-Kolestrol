@@ -56,26 +56,12 @@ $main_segment = $url_segments[0];
             position: relative;
         }
 
-        .nav-link:hover,
         .nav-link.active {
             color: #198754 !important;
         }
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 50%;
-            background-color: #198754;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-link:hover::after,
         .nav-link.active::after {
-            width: 80%;
+            width: none;
         }
 
         /* Tombol Khusus */
@@ -186,7 +172,7 @@ $main_segment = $url_segments[0];
                         </div>
 
                     <?php else: ?>
-                        <a href="<?= BASEURL; ?>/skrining" class="btn btn-check-free rounded-pill px-3 py-2 d-none d-lg-block">
+                        <a href="<?= BASEURL; ?>/skrining" class="btn btn-check-free rounded-pill px-3 py-2 d-none">
                             <i class="bi bi-heart-pulse me-1"></i> Cek Gratis
                         </a>
                         <a href="<?= BASEURL; ?>/auth/login" class="btn btn-login rounded-pill px-4">Masuk</a>
